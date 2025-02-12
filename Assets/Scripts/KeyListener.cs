@@ -11,11 +11,21 @@ public class KeyListener : MonoBehaviour
     public Sprite normalSprite;
     public Sprite pressedSprite;
 
+    public AudioClip perfectHitSound;
+    private AudioSource audioSource;
+
     private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Verifica se já existe um AudioSource, senão adiciona um
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     private void Update()
@@ -36,37 +46,63 @@ public class KeyListener : MonoBehaviour
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, goodThreshold);
 
+        GameObject closestNote = null;
+        float closestDistance = Mathf.Infinity;
+
         foreach (Collider2D hit in hits)
         {
             if (hit.CompareTag("Note"))
             {
                 float distance = Mathf.Abs(hit.transform.position.y - transform.position.y);
 
-                if (distance <= perfectThreshold)
+                if (distance < closestDistance)
                 {
-                    Debug.Log("Perfect!");
-                    GameManager.Instance.AddScore(300);
+                    closestDistance = distance;
+                    closestNote = hit.gameObject;
                 }
-                else if (distance <= greatThreshold)
-                {
-                    Debug.Log("Great!");
-                    GameManager.Instance.AddScore(200);
-                }
-                else if (distance <= goodThreshold)
-                {
-                    Debug.Log("Good!");
-                    GameManager.Instance.AddScore(100);
-                }
-
-                Destroy(hit.gameObject);
-                break;
             }
         }
+
+        if (closestNote != null)
+        {
+            if (closestDistance <= perfectThreshold)
+            {
+                Debug.Log("Perfect!");
+                GameManager.Instance.AddScore(300);
+
+                if (perfectHitSound != null && audioSource != null)
+                {
+                    audioSource.PlayOneShot(perfectHitSound);
+                    Debug.Log("Som tocado!");
+                }
+            }
+            else if (closestDistance <= greatThreshold)
+            {
+                Debug.Log("Great!");
+                GameManager.Instance.AddScore(200);
+            }
+            else if (closestDistance <= goodThreshold)
+            {
+                Debug.Log("Good!");
+                GameManager.Instance.AddScore(100);
+            }
+
+            Destroy(closestNote);
+        }
     }
-    
+
     private void OnDrawGizmos()
     {
+        // Exibe o threshold de "Good" (vermelho)
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, goodThreshold);
+
+        // Exibe o threshold de "Great" (amarelo)
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, greatThreshold);
+
+        // Exibe o threshold de "Perfect" (verde)
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, perfectThreshold);
     }
 }
