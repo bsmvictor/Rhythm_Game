@@ -12,10 +12,10 @@ public class NoteSpawner : MonoBehaviour
 
     private int notesSpawned = 0;
 
-    private Vector2 greenPos = new Vector2(1, 6);
-    private Vector2 bluePos = new Vector2(-1, 6);
-    private Vector2 redPos = new Vector2(3, 6);
-    private Vector2 pinkPos = new Vector2(-3, 6);
+    private Vector2 greenPos = new Vector2(-4, -6);
+    private Vector2 bluePos = new Vector2(-6, -6);
+    private Vector2 redPos = new Vector2(-2, -6);
+    private Vector2 pinkPos = new Vector2(-8, -6);
 
     void Start()
     {
