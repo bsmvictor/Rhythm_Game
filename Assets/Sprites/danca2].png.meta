@@ -1,0 +1,1326 @@
+fileFormatVersion: 2
+guid: 25f3ab69a60a68b409852e956f946546
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: danca2]_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 985
+        width: 305
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d97874e3edc5b4eb831f00788b7ca6
+      internalID: -1720049130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 988
+        width: 299
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ee37c219223a546bb21a45ea781a3d
+      internalID: 723200330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_2
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 988
+        width: 299
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c79521597072534c9ceea367f72dcf4
+      internalID: 2050123346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_3
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 988
+        width: 270
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad087b9c637dfc94d88525788997e183
+      internalID: 670880669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_4
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 988
+        width: 270
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c840805a807479345906d5669739b749
+      internalID: 281575076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_5
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 988
+        width: 310
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d9d498bf144fb43b3912dbfe84e08f
+      internalID: -377461079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_6
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 988
+        width: 310
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a68fc1d3ee3b443a60244638b7769e
+      internalID: 1419536501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_7
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 985
+        width: 289
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5f2bc336f6de64482de1083229b570
+      internalID: -1601955287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_8
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 984
+        width: 290
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcf0794a8e63274ca938d10b8b69a19
+      internalID: 44084919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_9
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 984
+        width: 290
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0544ebdf1b86d4db4ad849ce999357
+      internalID: 1057866924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_10
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 745
+        width: 278
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e9601de670c4f468d7df3e7b987e5c
+      internalID: -541967835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_11
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 745
+        width: 278
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5350c9c673a4e4a8e589dd95f62e8b
+      internalID: 1640695482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_12
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 745
+        width: 281
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a66bc40586954c42993ee6b785886f7
+      internalID: 354451631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_13
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 745
+        width: 281
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb9761b5b7d94e42818f13f2cc3aa85
+      internalID: 2133228969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_14
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 743
+        width: 256
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3572372999adb2c4dab046c44a56cb90
+      internalID: -371909221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_15
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 743
+        width: 256
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa21677380280b4f91ac22cf563f3ce
+      internalID: -1015695336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_16
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 743
+        width: 297
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b48e0f24bad1df4a87ba3ef67a72ec7
+      internalID: -226943035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_17
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 743
+        width: 297
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6d8a61f0bcd7d4e8cd47d0d3550ccc
+      internalID: -1049220799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_18
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 757
+        width: 290
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe382e80891121c42bfec43e970e366a
+      internalID: -313976432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_19
+      rect:
+        serializedVersion: 2
+        x: 2853
+        y: 757
+        width: 290
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b46e9b10cc62c47a967a2156996d51
+      internalID: -539066960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_20
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 536
+        width: 280
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5ca5a43659feb4b9b0f62d2634503f
+      internalID: -1010601782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_21
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 536
+        width: 280
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9619b0ee7e3aa9c418a63ed3cff40e7f
+      internalID: 1619118067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_22
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 512
+        width: 302
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94590f1d3f8fb9349bf63cb759063503
+      internalID: -7930530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_23
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 512
+        width: 302
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5018cde5d9222f4cacea03a079f64e7
+      internalID: 915363461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_24
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 509
+        width: 305
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2546351d488694ea8659e3ac4853ed
+      internalID: -312611288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_25
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 512
+        width: 299
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9d61a07fdf72946ab00e73f0be744f
+      internalID: 1746426494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_26
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 512
+        width: 299
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a36879eea36d342b1121a83109af8d
+      internalID: -1358228419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_27
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 512
+        width: 270
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f88dbb1c6e4d844baad4ea42d12186
+      internalID: 1374486831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_28
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 512
+        width: 270
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbc1ffb526e8154f8d5dc529e0d1fbb
+      internalID: -638015459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_29
+      rect:
+        serializedVersion: 2
+        x: 2839
+        y: 512
+        width: 310
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fa5bc6347c00a468a8a2a3510d931b
+      internalID: -840685781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_30
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 274
+        width: 310
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f1cb8a560197d49832bc46f4ab0cb9
+      internalID: -1779972932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_31
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 271
+        width: 289
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06aff92496f5e3c4c929de6b584a6719
+      internalID: 1171905744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_32
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 270
+        width: 290
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319a60cfeeb93fb4996c9866d97c0f3b
+      internalID: 70291121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_33
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 270
+        width: 290
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8146bfd0f5b2c4148a4cadb12a2f4ec2
+      internalID: -910986027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_34
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 269
+        width: 278
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef47bd31146817f4e83f0c5c5fbefcec
+      internalID: 189768836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_35
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 269
+        width: 278
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae228807d4381845947bcda03a213a0
+      internalID: 811137101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_36
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 269
+        width: 281
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81042d2016a3d5a46a7d7277ffe1853f
+      internalID: -761503688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_37
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 269
+        width: 281
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf44a0acf9756d49ad6f74479950f98
+      internalID: -1064001647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_38
+      rect:
+        serializedVersion: 2
+        x: 2567
+        y: 267
+        width: 256
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf14d7e422caa94b99dec6f64e69c2e
+      internalID: -655384831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_39
+      rect:
+        serializedVersion: 2
+        x: 2882
+        y: 267
+        width: 256
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bba7b1c8a94df4ba4c63dc02837aaf
+      internalID: -2106331685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_40
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 29
+        width: 297
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d9d080926faed419b21aab98bf841a
+      internalID: -974246567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 29
+        width: 297
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8836d78f673b12542add9d582fe82d34
+      internalID: -801239386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_42
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 43
+        width: 290
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363944c2bd86e604fb41158212b231fa
+      internalID: -152007594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_43
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 43
+        width: 290
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f3dc85ef846db47a693938bcf830bd
+      internalID: 1641458483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_44
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 60
+        width: 280
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e1c057a9d26d74c9ab7e3d9d0a6a38
+      internalID: -1377117063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_45
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 60
+        width: 280
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae02833760f5f6b439535725265d002f
+      internalID: 1980117177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_46
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 36
+        width: 302
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffb84c2ae09c7846a8df3ff139c4b44
+      internalID: 628323894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_47
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 36
+        width: 302
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7169fd80d67c5274db66fc2ae0aecec4
+      internalID: -1814644071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_48
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 0
+        width: 36
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f7971510bd03e46ad2f62ff166c132
+      internalID: -1457091460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_49
+      rect:
+        serializedVersion: 2
+        x: 2727
+        y: 0
+        width: 36
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bbb6bcb667da140bab0efc5d5203ee
+      internalID: -1025967234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_50
+      rect:
+        serializedVersion: 2
+        x: 2929
+        y: 0
+        width: 38
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd31fa3e7a763e4cb0847e6596fad00
+      internalID: 706508438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: danca2]_51
+      rect:
+        serializedVersion: 2
+        x: 3134
+        y: 0
+        width: 35
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def38de883aa23e45afd5d9097eede45
+      internalID: -704757375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 12277bcfbbb42e249b3dd9811028aa9d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      danca2]_0: -1720049130
+      danca2]_1: 723200330
+      danca2]_10: -541967835
+      danca2]_11: 1640695482
+      danca2]_12: 354451631
+      danca2]_13: 2133228969
+      danca2]_14: -371909221
+      danca2]_15: -1015695336
+      danca2]_16: -226943035
+      danca2]_17: -1049220799
+      danca2]_18: -313976432
+      danca2]_19: -539066960
+      danca2]_2: 2050123346
+      danca2]_20: -1010601782
+      danca2]_21: 1619118067
+      danca2]_22: -7930530
+      danca2]_23: 915363461
+      danca2]_24: -312611288
+      danca2]_25: 1746426494
+      danca2]_26: -1358228419
+      danca2]_27: 1374486831
+      danca2]_28: -638015459
+      danca2]_29: -840685781
+      danca2]_3: 670880669
+      danca2]_30: -1779972932
+      danca2]_31: 1171905744
+      danca2]_32: 70291121
+      danca2]_33: -910986027
+      danca2]_34: 189768836
+      danca2]_35: 811137101
+      danca2]_36: -761503688
+      danca2]_37: -1064001647
+      danca2]_38: -655384831
+      danca2]_39: -2106331685
+      danca2]_4: 281575076
+      danca2]_40: -974246567
+      danca2]_41: -801239386
+      danca2]_42: -152007594
+      danca2]_43: 1641458483
+      danca2]_44: -1377117063
+      danca2]_45: 1980117177
+      danca2]_46: 628323894
+      danca2]_47: -1814644071
+      danca2]_48: -1457091460
+      danca2]_49: -1025967234
+      danca2]_5: -377461079
+      danca2]_50: 706508438
+      danca2]_51: -704757375
+      danca2]_6: 1419536501
+      danca2]_7: -1601955287
+      danca2]_8: 44084919
+      danca2]_9: 1057866924
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
