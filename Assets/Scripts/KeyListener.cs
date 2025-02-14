@@ -73,7 +73,6 @@ public class KeyListener : MonoBehaviour
                 if (perfectHitSound != null && audioSource != null)
                 {
                     audioSource.PlayOneShot(perfectHitSound);
-                    Debug.Log("Som tocado!");
                 }
             }
             else if (closestDistance <= greatThreshold)

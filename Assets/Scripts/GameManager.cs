@@ -4,7 +4,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public TMP_Text scoreText;
+    //public TMP_Text scoreText;
     private int score = 0;
 
     private void Awake()
@@ -18,11 +18,11 @@ public class GameManager : MonoBehaviour
     public void AddScore(int value)
     {
         score += value;
-        UpdateScoreText();
+        //UpdateScoreText();
     }
 
     void UpdateScoreText()
     {
-        scoreText.text = "Score: " + score;
+        //scoreText.text = "Score: " + score;
     }
 }
