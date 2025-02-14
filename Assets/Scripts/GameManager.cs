@@ -25,4 +25,5 @@ public class GameManager : MonoBehaviour
     {
         //scoreText.text = "Score: " + score;
     }
+
 }

@@ -16,6 +16,11 @@ public class KeyListener : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    [Header("Combo Settings")]
+    private int comboCount = 0;
+    private int currentComboLevel = 0;
+    private readonly int[] comboThresholds = {25, 50, 100};
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -69,6 +74,7 @@ public class KeyListener : MonoBehaviour
             {
                 Debug.Log("Perfect!");
                 GameManager.Instance.AddScore(300);
+                IncrementCombo();
 
                 if (perfectHitSound != null && audioSource != null)
                 {
@@ -79,16 +85,54 @@ public class KeyListener : MonoBehaviour
             {
                 Debug.Log("Great!");
                 GameManager.Instance.AddScore(200);
+                IncrementCombo();
             }
             else if (closestDistance <= goodThreshold)
             {
                 Debug.Log("Good!");
                 GameManager.Instance.AddScore(100);
+                IncrementCombo();
             }
 
             Destroy(closestNote);
         }
+        else
+        {
+            ResetCombo();
+        }
     }
+
+    private void IncrementCombo()
+    {
+        comboCount++;
+        CheckCombo();
+    }
+
+    private void CheckCombo()
+    {
+        for (int i = 0; i < comboThresholds.Length; i++)
+        {
+            if (comboCount == comboThresholds[i] && currentComboLevel < (i + 1))
+            {
+                currentComboLevel = i + 1;
+                ActivateCombo(currentComboLevel);
+            }
+        }
+    }
+
+    private void ActivateCombo(int comboLevel)
+    {
+        Debug.Log($"Combo {comboLevel} ativado! ({comboCount} acertos consecutivos)");
+        //add animacoes depois
+    }
+
+    private void ResetCombo()
+    {
+        comboCount = 0;
+        currentComboLevel = 0;
+        Debug.Log("Combo resetado!");
+    }
+
 
     private void OnDrawGizmos()
     {
