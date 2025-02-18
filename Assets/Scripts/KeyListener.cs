@@ -21,6 +21,9 @@ public class KeyListener : MonoBehaviour
     private int currentComboLevel = 0;
     private readonly int[] comboThresholds = {25, 50, 100};
 
+    [Header("Animator Settings")]
+    public Animator animator;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -106,6 +109,7 @@ public class KeyListener : MonoBehaviour
     {
         comboCount++;
         CheckCombo();
+        PlayDanceAnimation();
     }
 
     private void CheckCombo()
@@ -123,7 +127,6 @@ public class KeyListener : MonoBehaviour
     private void ActivateCombo(int comboLevel)
     {
         Debug.Log($"Combo {comboLevel} ativado! ({comboCount} acertos consecutivos)");
-        //add animacoes depois
     }
 
     private void ResetCombo()
@@ -131,6 +134,38 @@ public class KeyListener : MonoBehaviour
         comboCount = 0;
         currentComboLevel = 0;
         Debug.Log("Combo resetado!");
+        PlayErrorAnimation();
+    }
+
+    private void PlayDanceAnimation()
+    {
+        if (animator == null) return;
+
+        if (comboCount >= 100)
+        {
+            animator.SetTrigger("Dance5");
+        }
+        else if (comboCount >= 50)
+        {
+            animator.SetTrigger("Dance4");
+        }
+        else if (comboCount >= 25)
+        {
+            animator.SetTrigger("Dance3");
+        }
+        else
+        {
+            int randomDance = Random.Range(1, 3);
+            animator.SetTrigger("Dance" + randomDance);
+        }
+    }
+
+    private void PlayErrorAnimation()
+    {
+        if (animator == null) return;
+
+        int randomError = Random.Range(1, 3); 
+        animator.SetTrigger("Error" + randomError);
     }
 
 
