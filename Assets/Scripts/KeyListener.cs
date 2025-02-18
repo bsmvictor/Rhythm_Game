@@ -16,13 +16,7 @@ public class KeyListener : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    [Header("Combo Settings")]
-    private int comboCount = 0;
-    private int currentComboLevel = 0;
-    private readonly int[] comboThresholds = {25, 50, 100};
-
-    [Header("Animator Settings")]
-    public Animator animator;
+    private ComboManager comboManager;
 
     private void Start()
     {
@@ -34,6 +28,8 @@ public class KeyListener : MonoBehaviour
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
+
+        comboManager = FindObjectOfType<ComboManager>();
     }
 
     private void Update()
@@ -77,7 +73,7 @@ public class KeyListener : MonoBehaviour
             {
                 Debug.Log("Perfect!");
                 GameManager.Instance.AddScore(300);
-                IncrementCombo();
+                comboManager.IncrementCombo();
 
                 if (perfectHitSound != null && audioSource != null)
                 {
@@ -88,86 +84,23 @@ public class KeyListener : MonoBehaviour
             {
                 Debug.Log("Great!");
                 GameManager.Instance.AddScore(200);
-                IncrementCombo();
+                comboManager.IncrementCombo();
             }
             else if (closestDistance <= goodThreshold)
             {
                 Debug.Log("Good!");
                 GameManager.Instance.AddScore(100);
-                IncrementCombo();
+                comboManager.IncrementCombo();
             }
 
             Destroy(closestNote);
         }
         else
         {
-            ResetCombo();
+            comboManager.ResetCombo();
         }
     }
-
-    private void IncrementCombo()
-    {
-        comboCount++;
-        CheckCombo();
-        PlayDanceAnimation();
-    }
-
-    private void CheckCombo()
-    {
-        for (int i = 0; i < comboThresholds.Length; i++)
-        {
-            if (comboCount == comboThresholds[i] && currentComboLevel < (i + 1))
-            {
-                currentComboLevel = i + 1;
-                ActivateCombo(currentComboLevel);
-            }
-        }
-    }
-
-    private void ActivateCombo(int comboLevel)
-    {
-        Debug.Log($"Combo {comboLevel} ativado! ({comboCount} acertos consecutivos)");
-    }
-
-    private void ResetCombo()
-    {
-        comboCount = 0;
-        currentComboLevel = 0;
-        Debug.Log("Combo resetado!");
-        PlayErrorAnimation();
-    }
-
-    private void PlayDanceAnimation()
-    {
-        if (animator == null) return;
-
-        if (comboCount >= 100)
-        {
-            animator.SetTrigger("Dance5");
-        }
-        else if (comboCount >= 50)
-        {
-            animator.SetTrigger("Dance4");
-        }
-        else if (comboCount >= 25)
-        {
-            animator.SetTrigger("Dance3");
-        }
-        else
-        {
-            int randomDance = Random.Range(1, 3);
-            animator.SetTrigger("Dance" + randomDance);
-        }
-    }
-
-    private void PlayErrorAnimation()
-    {
-        if (animator == null) return;
-
-        int randomError = Random.Range(1, 3); 
-        animator.SetTrigger("Error" + randomError);
-    }
-
+    
 
     private void OnDrawGizmos()
     {
