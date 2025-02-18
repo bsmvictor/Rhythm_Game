@@ -4,7 +4,12 @@ public class ComboManager : MonoBehaviour
 {
     private int comboCount = 0;
     private int currentComboLevel = 0;
-    private readonly int[] comboThresholds = { 25, 50, 100 };
+    private Animator oAnimator;
+
+    private void Start()
+    {
+        oAnimator = GetComponent<Animator>();
+    }
 
     public void IncrementCombo()
     {
@@ -14,20 +19,47 @@ public class ComboManager : MonoBehaviour
 
     private void CheckCombo()
     {
-        for (int i = 0; i < comboThresholds.Length; i++)
+        if (comboCount >= 100)
         {
-            if (comboCount == comboThresholds[i] && currentComboLevel < (i + 1))
-            {
-                currentComboLevel = i + 1;
-                ActivateCombo(currentComboLevel);
-            }
+            currentComboLevel = 3;
         }
+        else if (comboCount >= 50)
+        {
+            currentComboLevel = 2;
+        }
+        else if (comboCount >= 25)
+        {
+            currentComboLevel = 1;
+        }
+        else if (comboCount > 0)
+        {
+            currentComboLevel = 0;
+        }
+
+        ActivateCombo(currentComboLevel);
     }
 
     private void ActivateCombo(int comboLevel)
     {
-        Debug.Log($"Combo {comboLevel} ativado! ({comboCount} acertos consecutivos)");
+        switch (comboLevel)
+        {
+            case 0:
+                int startIndex = Random.Range(3, 5);
+                oAnimator.Play($"danca{startIndex}");
+                break;
 
+            case 1:
+                oAnimator.Play("danca1");
+                break;
+
+            case 2:
+                oAnimator.Play("danca2");
+                break;
+
+            case 3:
+                oAnimator.Play("danca5");
+                break;
+        }
     }
 
     public void ResetCombo()
@@ -35,5 +67,7 @@ public class ComboManager : MonoBehaviour
         comboCount = 0;
         currentComboLevel = 0;
         Debug.Log("Combo resetado!");
+        int erroIndex = Random.Range(1, 3);
+        oAnimator.Play($"erro{erroIndex}");
     }
 }
