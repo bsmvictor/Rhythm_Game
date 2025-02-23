@@ -218,7 +218,7 @@ MonoBehaviour:
   redNotePrefab: {fileID: 5306237005017053444, guid: 312b36f37d171d94b8930a390e27d72c, type: 3}
   pinkNotePrefab: {fileID: 6436997210381264897, guid: cb95e3b9c4fba064ba40464d23ddcd0c, type: 3}
   spawnInterval: 0.5
-  totalNotes: 150
+  totalNotes: 300
 --- !u!4 &91884972
 Transform:
   m_ObjectHideFlags: 0
