@@ -102,8 +102,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 108
   perfectThreshold: 0.3
-  greatThreshold: 0.5
   goodThreshold: 0.7
+  greatThreshold: 0.5
   normalSprite: {fileID: -2010618350, guid: 2e7bf651cde4f2743aff7c6b4c7c3165, type: 3}
   pressedSprite: {fileID: 4040299774827244652, guid: 2e7bf651cde4f2743aff7c6b4c7c3165, type: 3}
-  perfectHitSound: {fileID: 8300000, guid: 7b1983660de4e6e47b0f213d002a1e30, type: 3}
+  HitSound: {fileID: 8300000, guid: 7b1983660de4e6e47b0f213d002a1e30, type: 3}
+  MissSound: {fileID: 8300000, guid: 88c77f3b913ed4583afa810556d35ce4, type: 3}
+  hiteffect: {fileID: 3991267207131508712, guid: 39529e9b256c04d92af2a29201c7e002, type: 3}
+  goodeffect: {fileID: 5462713918853133910, guid: 1f540d64608a1463ab3a13b467d3e57a, type: 3}
+  perfecteffect: {fileID: 3507188940185005540, guid: ececc6347a7064d2daf3feac128b67dc, type: 3}
+  misseffect: {fileID: 6600583985679690153, guid: fdd0e1f9f3cf64e7388862e171024e05, type: 3}

@@ -18,7 +18,9 @@ public class FallingKey : MonoBehaviour
 
         if (transform.position.y > passThreshold)
         {
+            GameManager.Instance.NoteDestroyed();
             Destroy(gameObject);
         }
     }
+
 }

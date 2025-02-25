@@ -10,7 +10,8 @@ public class KeyListener : MonoBehaviour
     public Sprite normalSprite;
     public Sprite pressedSprite;
 
-    public AudioClip perfectHitSound;
+    public AudioClip HitSound;
+    public AudioClip MissSound;
     private AudioSource audioSource;
 
     private SpriteRenderer spriteRenderer;
@@ -69,40 +70,46 @@ public class KeyListener : MonoBehaviour
 
         if (closestNote != null)
         {
-            Vector3 effectPosition = new Vector3(transform.position.x, transform.position.y, -1);
+            if (closestNote != null)
+            {
+                Vector3 effectPosition = new Vector3(transform.position.x, transform.position.y, -1);
 
-            // Verifica o threshold sem priorizar, apenas instanciando o efeito correspondente
-            if (closestDistance > goodThreshold)
-            {
-                Debug.Log("Great!");
-                Instantiate(hiteffect, effectPosition, hiteffect.transform.rotation);
-                GameManager.Instance.AddScore(100);
-                comboManager.IncrementCombo();
-            }
-            else if (closestDistance > perfectThreshold)
-            {
-                Debug.Log("Good!");
-                Instantiate(goodeffect, effectPosition, goodeffect.transform.rotation);
-                GameManager.Instance.AddScore(200);
-                comboManager.IncrementCombo();
-            }
-            else
-            {
-                Debug.Log("Perfect!");
-                Instantiate(perfecteffect, effectPosition, perfecteffect.transform.rotation);
-                GameManager.Instance.AddScore(300);
-                comboManager.IncrementCombo();
-                PlaySound(perfectHitSound);
-            }
+                if (closestDistance > goodThreshold)
+                {
+                    //Debug.Log("Great!");
+                    Instantiate(hiteffect, effectPosition, hiteffect.transform.rotation);
+                    GameManager.Instance.AddScore(10);
+                    comboManager.IncrementCombo();
+                    PlaySound(HitSound);
+                }
+                else if (closestDistance > perfectThreshold)
+                {
+                    //Debug.Log("Good!");
+                    Instantiate(goodeffect, effectPosition, goodeffect.transform.rotation);
+                    GameManager.Instance.AddScore(50);
+                    comboManager.IncrementCombo();
+                    PlaySound(HitSound);
+                }
+                else
+                {
+                    //Debug.Log("Perfect!");
+                    Instantiate(perfecteffect, effectPosition, perfecteffect.transform.rotation);
+                    GameManager.Instance.AddScore(100);
+                    comboManager.IncrementCombo();
+                    PlaySound(HitSound);
+                }
 
-            Destroy(closestNote);
+                GameManager.Instance.NoteDestroyed();
+                Destroy(closestNote);
+            }
         }
         else
         {
             comboManager.ResetCombo();
             Vector3 effectPosition = new Vector3(transform.position.x, transform.position.y, -1);
             Instantiate(misseffect, effectPosition, misseffect.transform.rotation);
-            Debug.Log("Miss!");
+            PlaySound(MissSound);
+            //Debug.Log("Miss!");
         }
     }
 

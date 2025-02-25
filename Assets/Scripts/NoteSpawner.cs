@@ -7,8 +7,8 @@ public class NoteSpawner : MonoBehaviour
     public GameObject redNotePrefab;
     public GameObject pinkNotePrefab;
 
-    public float spawnInterval = 0.5f; // Parâmetro ajustável no editor
-    public int totalNotes = 100; // Total de notas geradas por jogo
+    public float spawnInterval = 0.5f;
+    public int totalNotes = 100;
 
     private int notesSpawned = 0;
 
@@ -17,9 +17,15 @@ public class NoteSpawner : MonoBehaviour
     private Vector2 redPos = new Vector2(-2, -6);
     private Vector2 pinkPos = new Vector2(-8, -6);
 
-    void Start()
+    private bool isSpawning = false;
+
+    public void StartSpawning()
     {
-        InvokeRepeating("SpawnNotes", 1.0f, spawnInterval); // Controla o ritmo da "música"
+        if (!isSpawning)
+        {
+            isSpawning = true;
+            InvokeRepeating("SpawnNotes", 1.0f, spawnInterval);
+        }
     }
 
     void SpawnNotes()
@@ -49,5 +55,6 @@ public class NoteSpawner : MonoBehaviour
         }
 
         notesSpawned++;
+        GameManager.Instance.NoteSpawned();
     }
 }
