@@ -1,12 +1,11 @@
-using UnityEditor;
 using UnityEngine;
 
 public class KeyListener : MonoBehaviour
 {
     public KeyCode key;
     public float perfectThreshold = 0.3f;
-    public float greatThreshold = 0.5f;
-    public float goodThreshold = 0.7f;
+    public float goodThreshold = 0.5f;
+    public float greatThreshold = 0.7f;
 
     public Sprite normalSprite;
     public Sprite pressedSprite;
@@ -18,11 +17,12 @@ public class KeyListener : MonoBehaviour
 
     private ComboManager comboManager;
 
+    public GameObject hiteffect, goodeffect, perfecteffect, misseffect;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Verifica se já existe um AudioSource, senão adiciona um
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
@@ -48,7 +48,7 @@ public class KeyListener : MonoBehaviour
 
     void CheckHit()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, goodThreshold);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, greatThreshold);
 
         GameObject closestNote = null;
         float closestDistance = Mathf.Infinity;
@@ -69,28 +69,30 @@ public class KeyListener : MonoBehaviour
 
         if (closestNote != null)
         {
-            if (closestDistance <= perfectThreshold)
-            {
-                Debug.Log("Perfect!");
-                GameManager.Instance.AddScore(300);
-                comboManager.IncrementCombo();
+            Vector3 effectPosition = new Vector3(transform.position.x, transform.position.y, -1);
 
-                if (perfectHitSound != null && audioSource != null)
-                {
-                    audioSource.PlayOneShot(perfectHitSound);
-                }
-            }
-            else if (closestDistance <= greatThreshold)
+            // Verifica o threshold sem priorizar, apenas instanciando o efeito correspondente
+            if (closestDistance > goodThreshold)
             {
                 Debug.Log("Great!");
+                Instantiate(hiteffect, effectPosition, hiteffect.transform.rotation);
+                GameManager.Instance.AddScore(100);
+                comboManager.IncrementCombo();
+            }
+            else if (closestDistance > perfectThreshold)
+            {
+                Debug.Log("Good!");
+                Instantiate(goodeffect, effectPosition, goodeffect.transform.rotation);
                 GameManager.Instance.AddScore(200);
                 comboManager.IncrementCombo();
             }
-            else if (closestDistance <= goodThreshold)
+            else
             {
-                Debug.Log("Good!");
-                GameManager.Instance.AddScore(100);
+                Debug.Log("Perfect!");
+                Instantiate(perfecteffect, effectPosition, perfecteffect.transform.rotation);
+                GameManager.Instance.AddScore(300);
                 comboManager.IncrementCombo();
+                PlaySound(perfectHitSound);
             }
 
             Destroy(closestNote);
@@ -98,22 +100,30 @@ public class KeyListener : MonoBehaviour
         else
         {
             comboManager.ResetCombo();
+            Vector3 effectPosition = new Vector3(transform.position.x, transform.position.y, -1);
+            Instantiate(misseffect, effectPosition, misseffect.transform.rotation);
+            Debug.Log("Miss!");
         }
     }
-    
+
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
 
     private void OnDrawGizmos()
     {
-        // Exibe o threshold de "Good" (vermelho)
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, goodThreshold);
-
-        // Exibe o threshold de "Great" (amarelo)
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, greatThreshold);
-
-        // Exibe o threshold de "Perfect" (verde)
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, perfectThreshold);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, goodThreshold);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, greatThreshold);
     }
 }

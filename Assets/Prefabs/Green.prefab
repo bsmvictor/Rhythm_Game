@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4871304801343041533}
   - component: {fileID: 4055476346690882210}
   - component: {fileID: 1064544563818842241}
-  - component: {fileID: 1367229705528357963}
+  - component: {fileID: 6805521541249031757}
   m_Layer: 0
   m_Name: Green
   m_TagString: Note
@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2ff1ba916f2e3419710d637cfe4390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2.3
---- !u!61 &1367229705528357963
-BoxCollider2D:
+  beatTempo: 120
+--- !u!58 &6805521541249031757
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,19 +132,9 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1.3333334, y: 1.3333334}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.43

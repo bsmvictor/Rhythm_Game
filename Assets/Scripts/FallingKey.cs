@@ -1,13 +1,20 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FallingKey : MonoBehaviour
 {
-    public float fallSpeed = 2.0f;
-    private float passThreshold = 1.4f; 
+    public float beatTempo;
+    private float passThreshold = 1.4f;
+
+    private void Start()
+    {
+        beatTempo = beatTempo / 60f;
+    }
 
     void Update()
     {
-        transform.Translate(Vector2.up * (fallSpeed * Time.deltaTime));
+        transform.position += new Vector3(0f, beatTempo * Time.deltaTime, 0f);
 
         if (transform.position.y > passThreshold)
         {
