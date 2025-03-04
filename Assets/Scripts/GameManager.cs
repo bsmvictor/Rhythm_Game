@@ -15,12 +15,33 @@ public class GameManager : MonoBehaviour
     private int totalNotes = 100;
     private bool gameStarted = false;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
-
-    public void StartGame()
+    public void Start()
     {
         gameStarted = true;
-        FindObjectOfType<NoteSpawner>().StartSpawning();
+        Debug.Log("StartGame foi chamado!"); 
+        
+        NoteSpawner spawner = FindObjectOfType<NoteSpawner>();
+
+        if (spawner == null)
+        {
+            Debug.LogError("ERRO: NoteSpawner não encontrado na cena!");
+            return;
+        }
+
+        spawner.StartSpawning();
     }
 
     public void AddScore(int value)

@@ -267,7 +267,6 @@ GameObject:
   - component: {fileID: 39824678}
   - component: {fileID: 39824677}
   - component: {fileID: 39824676}
-  - component: {fileID: 39824679}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -339,8 +338,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 39824679}
-        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
+      - m_Target: {fileID: 1110918052}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: LoadGame
         m_Mode: 1
         m_Arguments:
@@ -389,18 +388,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39824674}
   m_CullTransparentMesh: 1
---- !u!114 &39824679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39824674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d438103971799864bac6a564f4954a28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &100322815
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110918051}
+  - component: {fileID: 1110918052}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -935,6 +923,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1110918052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110918050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c53a3f59c5c7b4a9d3d5996fb58d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1454603483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1188,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1883429814}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1110918052}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1883429814
 MonoBehaviour:
   m_ObjectHideFlags: 0
