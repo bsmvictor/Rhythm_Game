@@ -23,14 +23,10 @@ public class KeyListener : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
-
+        audioSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
         comboManager = FindObjectOfType<ComboManager>();
+        comboManager = FindObjectOfType<ComboManager>();
+        key = KeybindManager.Instance.LoadKey("HitKey", key);
     }
 
     private void Update()
