@@ -21,28 +21,11 @@ public class KeybindManager : MonoBehaviour
     {
         PlayerPrefs.SetString(action, key.ToString());
         PlayerPrefs.Save();
+        Debug.Log($"Tecla {action} salva como: {key}");
     }
 
     public KeyCode LoadKey(string action, KeyCode defaultKey)
     {
-        if (!PlayerPrefs.HasKey(action))
-        {
-            // Definição das teclas padrão
-            switch (action)
-            {
-                case "Up":
-                    return KeyCode.UpArrow;
-                case "Down":
-                    return KeyCode.DownArrow;
-                case "Left":
-                    return KeyCode.LeftArrow;
-                case "Right":
-                    return KeyCode.RightArrow;
-                default:
-                    return defaultKey; // Se a ação não for encontrada, retorna o default passado
-            }
-        }
-
         string savedKey = PlayerPrefs.GetString(action, defaultKey.ToString());
         return (KeyCode)System.Enum.Parse(typeof(KeyCode), savedKey);
     }

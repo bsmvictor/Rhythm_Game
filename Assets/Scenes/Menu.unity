@@ -546,7 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keybindButton: {fileID: 136803486}
   buttonText: {fileID: 1996464311}
-  actionName: "\u2192"
+  actionName: Right
 --- !u!114 &136803486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,7 +795,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 954910772}
-  - {fileID: 1450412008}
   - {fileID: 1854383699}
   - {fileID: 1104704344}
   - {fileID: 2031730612}
@@ -1201,7 +1200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keybindButton: {fileID: 1104704346}
   buttonText: {fileID: 1919439407}
-  actionName: "\u2193"
+  actionName: Down
 --- !u!114 &1104704346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1362,11 +1361,11 @@ Transform:
   m_GameObject: {fileID: 1450412006}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -157.86673, y: -34.84216, z: -559.8288}
-  m_LocalScale: {x: 9.353073, y: 9.353073, z: 9.353073}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 612452756}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1450412010
 MonoBehaviour:
@@ -1956,7 +1955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keybindButton: {fileID: 1854383702}
   buttonText: {fileID: 2012704666}
-  actionName: "\u2191"
+  actionName: Up
 --- !u!1 &1878998073
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,7 +2762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keybindButton: {fileID: 2031730614}
   buttonText: {fileID: 1676008639}
-  actionName: "\u2190"
+  actionName: Left
 --- !u!114 &2031730614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2852,4 +2851,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 1454603486}
   - {fileID: 1846662285}
+  - {fileID: 1450412008}
   - {fileID: 100322819}

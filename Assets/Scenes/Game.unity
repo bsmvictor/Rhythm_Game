@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4570817789821644029, guid: 70ed2afb86a0eaf47ad49914385a4fab, type: 3}
       propertyPath: m_Name
-      value: S
+      value: Down
       objectReference: {fileID: 0}
     - target: {fileID: 8859901044119782269, guid: 70ed2afb86a0eaf47ad49914385a4fab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -655,7 +655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 457230865030587204, guid: 29260e42611bff44cb7824f70d28da01, type: 3}
       propertyPath: m_Name
-      value: L
+      value: Right
       objectReference: {fileID: 0}
     - target: {fileID: 4366059661256007477, guid: 29260e42611bff44cb7824f70d28da01, type: 3}
       propertyPath: m_LocalPosition.x
@@ -747,9 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 499307620}
-  endScreen: {fileID: 0}
   finalScoreText: {fileID: 499307620}
-  startScreen: {fileID: 0}
 --- !u!1 &1157015317
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +881,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3748822623850779019, guid: e27a55951fd91254d8ab377408756d90, type: 3}
       propertyPath: m_Name
-      value: A
+      value: Left
       objectReference: {fileID: 0}
     - target: {fileID: 4169482618494059081, guid: e27a55951fd91254d8ab377408756d90, type: 3}
       propertyPath: m_LocalPosition.x
@@ -940,7 +938,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4608719030521946924, guid: 18f3760c21c484d4682a5f707ac16044, type: 3}
       propertyPath: m_Name
-      value: K
+      value: Up
       objectReference: {fileID: 0}
     - target: {fileID: 4908026846784158890, guid: 18f3760c21c484d4682a5f707ac16044, type: 3}
       propertyPath: m_LocalPosition.x

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6551358469164846883}
   - component: {fileID: 931203921615139603}
   m_Layer: 0
-  m_Name: K
+  m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d94956e93c872478d2f28d7d8e1179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: 107
+  keyIdentifier: Up
+  key: 273
   perfectThreshold: 0.3
   goodThreshold: 0.7
   greatThreshold: 0.5

@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     private int score = 0;
     private int notesDestroyed = 0;
     private int totalNotes = 100;
-    private bool gameStarted = false;
 
     private void Awake()
     {
@@ -30,7 +29,6 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        gameStarted = true;
         Debug.Log("StartGame foi chamado!"); 
         
         NoteSpawner spawner = FindObjectOfType<NoteSpawner>();
