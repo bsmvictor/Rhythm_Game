@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text scoreText;
     public TMP_Text finalScoreText;
+    public TMP_Text multiplierText;
 
     public GameObject endScreen;
     public GameObject pauseScreen;
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     private bool checkingForEnd = false;
     private bool isPaused = false;
+
+    private ComboManager comboManager;
 
     private void Awake()
     {
@@ -39,6 +42,13 @@ public class GameManager : MonoBehaviour
         pauseScreen.SetActive(false);
         Time.timeScale = 1;
 
+        comboManager = FindObjectOfType<ComboManager>();
+
+        if (comboManager == null)
+        {
+            Debug.LogError("ERRO: ComboManager não encontrado!");
+        }
+
         NoteSpawner spawner = FindObjectOfType<NoteSpawner>();
 
         if (spawner == null)
@@ -48,6 +58,7 @@ public class GameManager : MonoBehaviour
         }
 
         spawner.StartSpawning();
+        UpdateMultiplierText(); // Atualiza o multiplicador ao iniciar o jogo
     }
 
     private void Update()
@@ -56,6 +67,8 @@ public class GameManager : MonoBehaviour
         {
             TogglePause();
         }
+
+        UpdateMultiplierText(); // Atualiza o multiplicador em tempo real
     }
 
     public void TogglePause()
@@ -64,25 +77,38 @@ public class GameManager : MonoBehaviour
 
         if (isPaused)
         {
-            Time.timeScale = 0; // Pausa o jogo
+            Time.timeScale = 0;
             pauseScreen.SetActive(true);
         }
         else
         {
-            Time.timeScale = 1; // Retoma o jogo
+            Time.timeScale = 1;
             pauseScreen.SetActive(false);
         }
     }
 
-    public void AddScore(int value)
+    public void AddScore(int baseValue)
     {
-        score += value;
+        if (comboManager == null) return;
+
+        int multiplier = comboManager.GetMultiplier();
+        int finalScore = baseValue * multiplier;
+
+        score += finalScore;
         UpdateScoreText();
     }
 
     void UpdateScoreText()
     {
         scoreText.text = "Score: " + score;
+    }
+
+    private void UpdateMultiplierText()
+    {
+        if (multiplierText == null || comboManager == null) return;
+
+        int multiplier = comboManager.GetMultiplier();
+        multiplierText.text = $"x{multiplier}"; // Exibe "x1", "x2", etc.
     }
 
     public void NoteSpawned()
@@ -114,12 +140,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("Fim do jogo! Exibindo tela final...");
         finalScoreText.text = "Final Score: " + score;
         endScreen.SetActive(true);
-        Time.timeScale = 0; // Garante que o jogo fique pausado na tela final
+        Time.timeScale = 0;
     }
 
     public void RestartGame()
     {
-        Time.timeScale = 1; // Garante que o jogo não reinicie pausado
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

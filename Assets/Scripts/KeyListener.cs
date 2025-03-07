@@ -73,6 +73,7 @@ public class KeyListener : MonoBehaviour
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, greatThreshold);
         GameObject closestNote = null;
         float closestDistance = Mathf.Infinity;
+        int multiplier = comboManager.GetMultiplier(); // Obtém o multiplicador atual
 
         foreach (Collider2D hit in hits)
         {
@@ -95,21 +96,21 @@ public class KeyListener : MonoBehaviour
             if (closestDistance > goodThreshold)
             {
                 Instantiate(hiteffect, effectPosition, hiteffect.transform.rotation);
-                GameManager.Instance.AddScore(10);
+                GameManager.Instance.AddScore(5 * multiplier);
                 comboManager.IncrementCombo();
                 PlaySound(HitSound);
             }
             else if (closestDistance > perfectThreshold)
             {
                 Instantiate(goodeffect, effectPosition, goodeffect.transform.rotation);
-                GameManager.Instance.AddScore(50);
+                GameManager.Instance.AddScore(10 * multiplier);
                 comboManager.IncrementCombo();
                 PlaySound(HitSound);
             }
             else
             {
                 Instantiate(perfecteffect, effectPosition, perfecteffect.transform.rotation);
-                GameManager.Instance.AddScore(100);
+                GameManager.Instance.AddScore(20 * multiplier);
                 comboManager.IncrementCombo();
                 PlaySound(HitSound);
             }
@@ -125,6 +126,7 @@ public class KeyListener : MonoBehaviour
             comboManager.MissNote();
         }
     }
+
 
     private void PlaySound(AudioClip clip)
     {
