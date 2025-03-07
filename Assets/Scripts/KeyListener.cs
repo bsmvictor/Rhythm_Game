@@ -119,10 +119,10 @@ public class KeyListener : MonoBehaviour
         }
         else
         {
-            comboManager.ResetCombo();
             Vector3 effectPosition = new Vector3(transform.position.x, transform.position.y, -1);
             Instantiate(misseffect, effectPosition, misseffect.transform.rotation);
             PlaySound(MissSound);
+            comboManager.MissNote();
         }
     }
 

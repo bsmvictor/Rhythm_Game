@@ -5,10 +5,12 @@ using UnityEngine;
 public class FallingKey : MonoBehaviour
 {
     public float beatTempo;
-    private float passThreshold = 1.4f;
+    public float passThreshold = 3f;
+    private ComboManager comboManager;
 
     private void Start()
     {
+        comboManager = FindObjectOfType<ComboManager>();
         beatTempo = beatTempo / 60f;
     }
 
@@ -20,6 +22,7 @@ public class FallingKey : MonoBehaviour
         {
             GameManager.Instance.NoteDestroyed();
             Destroy(gameObject);
+            comboManager.MissNote();
         }
     }
 

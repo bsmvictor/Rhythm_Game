@@ -17,6 +17,11 @@ public class ComboManager : MonoBehaviour
         CheckCombo();
     }
 
+    public void MissNote()
+    {
+        ResetCombo();
+    }
+
     private void CheckCombo()
     {
         if (comboCount >= 100)
@@ -31,7 +36,7 @@ public class ComboManager : MonoBehaviour
         {
             currentComboLevel = 1;
         }
-        else if (comboCount > 0)
+        else
         {
             currentComboLevel = 0;
         }
@@ -62,12 +67,15 @@ public class ComboManager : MonoBehaviour
         }
     }
 
-    public void ResetCombo()
+    private void ResetCombo()
     {
-        comboCount = 0;
-        currentComboLevel = 0;
-        Debug.Log("Combo resetado!");
-        int erroIndex = Random.Range(1, 3);
-        oAnimator.Play($"erro{erroIndex}");
+        if (comboCount > 0)
+        {
+            comboCount = 0;
+            currentComboLevel = 0;
+
+            int erroIndex = Random.Range(1, 3);
+            oAnimator.Play($"erro{erroIndex}");
+        }
     }
 }
