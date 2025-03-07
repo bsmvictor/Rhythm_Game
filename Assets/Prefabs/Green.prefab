@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatTempo: 120
+  passThreshold: 3.2
 --- !u!58 &6805521541249031757
 CircleCollider2D:
   m_ObjectHideFlags: 0
