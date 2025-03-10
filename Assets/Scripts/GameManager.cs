@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public GameObject endScreen;
     public GameObject pauseScreen;
 
+    public GameObject musicFloor;
+
     private int score = 0;
     private int notesDestroyed = 0;
     private int totalNotes = 100;
@@ -40,6 +42,7 @@ public class GameManager : MonoBehaviour
     {
         endScreen.SetActive(false);
         pauseScreen.SetActive(false);
+        musicFloor.SetActive(true);
         Time.timeScale = 1;
 
         comboManager = FindObjectOfType<ComboManager>();
@@ -74,6 +77,7 @@ public class GameManager : MonoBehaviour
     public void TogglePause()
     {
         isPaused = !isPaused;
+        musicFloor.SetActive(false);
 
         if (isPaused)
         {
@@ -84,6 +88,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
             pauseScreen.SetActive(false);
+            musicFloor.SetActive(true);
         }
     }
 
