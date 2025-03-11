@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject pauseScreen;
 
     public GameObject musicFloor;
+    public AudioSource musicPlayer;
 
     private int score = 0;
     private int notesDestroyed = 0;
@@ -83,12 +84,22 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0;
             pauseScreen.SetActive(true);
+            
+            if (musicPlayer != null && musicPlayer.isPlaying)
+            {
+                musicPlayer.Pause();
+            }
         }
         else
         {
             Time.timeScale = 1;
             pauseScreen.SetActive(false);
             musicFloor.SetActive(true);
+            
+            if (musicPlayer != null && !musicPlayer.isPlaying)
+            {
+                musicPlayer.Play(); 
+            }
         }
     }
 
@@ -145,7 +156,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Fim do jogo! Exibindo tela final...");
         finalScoreText.text = "Final Score: " + score;
         endScreen.SetActive(true);
+        musicFloor.SetActive(false);
         Time.timeScale = 0;
+        
+        if (musicPlayer != null)
+        {
+            musicPlayer.Pause();
+        }
     }
 
     public void RestartGame()

@@ -784,7 +784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &242532534
 Transform:
   m_ObjectHideFlags: 0
@@ -2340,8 +2340,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1357179113}
   finalScoreText: {fileID: 1483421622}
+  multiplierText: {fileID: 0}
   endScreen: {fileID: 1144914060}
   pauseScreen: {fileID: 774830621}
+  musicFloor: {fileID: 1593422676}
+  musicPlayer: {fileID: 1524539682}
 --- !u!1 &1093822721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4207,7 +4210,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f91df4ef752c1db49936a98fa058b7a8, type: 3}
   m_Resource: {fileID: 8300000, guid: f91df4ef752c1db49936a98fa058b7a8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.248
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4217,7 +4220,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 0.525
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -4251,7 +4254,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.287
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4281,7 +4284,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.419
       inSlope: 0
       outSlope: 0
       tangentMode: 0
