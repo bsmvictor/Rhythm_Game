@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4169482618494059081}
   - component: {fileID: 4895993850894389003}
   - component: {fileID: 9177956989098090921}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3748822623850779019}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1397602881
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4994646971384792779, guid: 2e7bf651cde4f2743aff7c6b4c7c3165, type: 3}

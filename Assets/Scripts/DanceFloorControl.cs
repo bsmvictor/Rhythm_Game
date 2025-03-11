@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class DanceFloorControl : MonoBehaviour
 {
-    private Renderer tileRenderer;
+    private SpriteRenderer tileRenderer;
     private Color[] colors = { Color.magenta, Color.cyan };
 
     void Start()
     {
-        tileRenderer = GetComponent<Renderer>();
+        tileRenderer = GetComponent<SpriteRenderer>();
         InvokeRepeating("ChangeColor", 0f, 0.5f); 
     }
 
     void ChangeColor()
     {
-        tileRenderer.material.color = colors[Random.Range(0, colors.Length)];
+        tileRenderer.color = colors[Random.Range(0, colors.Length)];
     }
     
 }

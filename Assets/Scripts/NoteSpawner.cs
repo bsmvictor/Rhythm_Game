@@ -8,10 +8,10 @@ public class NoteSpawner : MonoBehaviour
     public GameObject redNotePrefab;
     public GameObject pinkNotePrefab;
 
-    private Vector2 greenPos = new Vector2(-4, -6);
-    private Vector2 bluePos = new Vector2(-6, -6);
-    private Vector2 redPos = new Vector2(-2, -6);
-    private Vector2 pinkPos = new Vector2(-8, -6);
+    private Vector3 greenPos = new Vector3(-4, -6, -1);
+    private Vector3 bluePos = new Vector3(-6, -6, -1);
+    private Vector3 redPos = new Vector3(-2, -6, -1);
+    private Vector3 pinkPos = new Vector3(-8, -6, -1);
 
     public int totalNotes = 200; // Aumentei para manter um fluxo constante
     private int notesSpawned = 0;
@@ -66,7 +66,7 @@ public class NoteSpawner : MonoBehaviour
     private void SpawnNote()
     {
         int randomNote = Random.Range(0, 4);
-        Vector2 spawnPos = GetNotePosition(randomNote);
+        Vector3 spawnPos = GetNotePosition(randomNote);
 
         Instantiate(GetPrefab(randomNote), spawnPos, Quaternion.identity);
         GameManager.Instance.NoteSpawned();
@@ -84,7 +84,7 @@ public class NoteSpawner : MonoBehaviour
         }
     }
 
-    private Vector2 GetNotePosition(int noteIndex)
+    private Vector3 GetNotePosition(int noteIndex)
     {
         switch (noteIndex)
         {
@@ -92,7 +92,7 @@ public class NoteSpawner : MonoBehaviour
             case 1: return bluePos;
             case 2: return redPos;
             case 3: return pinkPos;
-            default: return Vector2.zero;
+            default: return Vector3.zero;
         }
     }
 

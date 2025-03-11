@@ -3,23 +3,23 @@ using UnityEngine;
 public class DanceFloorSync : MonoBehaviour
 {
     public AudioSource music;
-    private Renderer tileRenderer;
+    private SpriteRenderer tileRenderer;
     private Color[] colors = {  Color.magenta, Color.cyan };
 
     void Start()
     {
-        tileRenderer = GetComponent<Renderer>();
+        tileRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         float[] spectrum = new float[64];
         music.GetSpectrumData(spectrum, 0, FFTWindow.Blackman);
-        float intensity = spectrum[Random.Range(0, 64)];
+        float intensity = spectrum[Random.Range(5, 20)];
 
-        if (intensity > 0.1f)
+        if (intensity > 0.01f)
         {
-            tileRenderer.material.color = colors[Random.Range(0, colors.Length)];
+            tileRenderer.color = colors[Random.Range(0, colors.Length)];
         }
     }
 }
