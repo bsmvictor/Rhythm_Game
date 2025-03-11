@@ -28,9 +28,9 @@ public class NoteSpawner : MonoBehaviour
         (10f, 0.5f),
         (10f, 0.4f),
         (10f, 0.35f),
-        (10f, 0.25f),
+        (10f, 0.26f),
         (10f, 0.3f),
-        (10f, 0.2f),
+        (10f, 0.26f),
         (10f, 0.3f),
         (10f, 0.5f)
     };
