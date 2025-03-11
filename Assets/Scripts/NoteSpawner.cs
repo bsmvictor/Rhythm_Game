@@ -19,6 +19,8 @@ public class NoteSpawner : MonoBehaviour
 
     private int currentSegment = 0;
     private float nextSpawnTime = 0f;
+    
+    private float spawnDelay = 0.05f;
 
     // Maior duração + spawn mais intenso
     private List<(float duration, float spawnRate)> difficultySegments = new List<(float, float)>
@@ -53,7 +55,7 @@ public class NoteSpawner : MonoBehaviour
 
                 if (currentSegment < difficultySegments.Count)
                 {
-                    nextSpawnTime = Time.time + difficultySegments[currentSegment].spawnRate;
+                    nextSpawnTime = Time.time + difficultySegments[currentSegment].spawnRate + spawnDelay; 
                 }
 
                 notesSpawned++;
